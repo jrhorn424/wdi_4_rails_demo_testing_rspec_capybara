@@ -2,3 +2,12 @@
   <h1><%= @article.title %></h1>
   <%= @article.body %>
 </article>
+
+<aside>
+  <h1>Comments</h1>
+  <ul class="comments">
+    <% @article.comments.each do |comment| %>
+      <li class="comment"><%= comment.body %></li>
+    <% end %>
+  </ul>
+</aside>
